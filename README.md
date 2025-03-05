@@ -8,6 +8,8 @@ Your **PetReunit-App** is now live! 🎉
 
 🔗 **Check it out here:** [PetReunit-App](https://petreunite-app-production.up.railway.app/public/html/report-pets.html)  
 📸 **Follow on Instagram:** [pets_reunite](https://www.instagram.com/pets_reunite)  
+[📹 Watch Demo Video](https://github.com/Havishjupudi/PetReunite-App-/raw/main/demo_VID.mp4)
+
 
 ⚠️ **Recommendation:** Best viewed on **desktop** as it is not fully optimized for mobile devices.
 
