@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/pet-details.css">
+    <title>Pet Detail</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div>
+                <div class="image-section">
+                    <img id="pet-image" alt="Pet Image" class="pet-image">
+                </div>
+                <div class="missingSince">
+                    <p class="ms">Missing Since:</p>
+                    <p><span id="date-last-seen"></span></p>
+                </div>
+            </div>
+            <div class="details-section">
+                <h1 id="pet-name" class="pet-name"></h1>
+                <p id="pet-id" class="pet-id"><strong>ID:</strong></p>
+                <p><strong>Status:</strong> <span id="pet-status" class="status" style="color: red;"></span></p>
+                <p><strong>Sex:</strong> <span id="pet-sex"></span></p>
+                <p><strong>Species:</strong> <span id="pet-species"></span></p>
+                <p><strong>Area Last Seen:</strong> <span id="area-last-seen"></span></p>
+                <p><strong>Nearest Landmark:</strong> <span id="nearest-landmark"></span></p>
+                <p><strong>Description:</strong> <span id="pet-description"></span></p>
+                <a href="https://www.instagram.com/pawsreconnected/" target="_blank">
+                    <button class="view-instagram">View on Instagram</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            // Get pet ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const petId = urlParams.get('id');
+
+            if (petId) {
+                try {
+                    const response = await fetch(`/pets/${petId}`);
+                    const pet = await response.json();
+
+                    const missingSinceDate = pet.dateLastSeen.split('T')[0]; // Removes the time and extra data
+
+                    // Split the date into [YYYY, MM, DD]
+                    const [year, month, day] = missingSinceDate.split('-');
+
+                    // Months in Array
+                    const months = [
+                        'January', 'February', 'March', 'April', 'May', 'June', 
+                        'July', 'August', 'September', 'October', 'November', 'December'
+                    ];
+
+                    // Format the date as "19 February 2024"
+                    const formattedDate = `${parseInt(day)} ${months[parseInt(month) - 1]} ${year}`;
+
+
+                    // Display pet data
+                    document.getElementById('pet-image').src = pet.pictureUrl; 
+                    document.getElementById('pet-name').innerText = pet.name;
+                    document.getElementById('pet-id').innerHTML = `<strong>ID:</strong> ${pet.reuniteId}`;
+                    document.getElementById('pet-status').innerText = pet.isLost ? 'Lost' : 'Found';
+                    document.getElementById('pet-sex').innerText = pet.sex;
+                    document.getElementById('pet-species').innerText = pet.species;
+                    document.getElementById('date-last-seen').innerText = formattedDate;
+                    document.getElementById('area-last-seen').innerText = pet.areaLastSeen;
+                    document.getElementById('nearest-landmark').innerText = pet.nearestLandmark;
+                    document.getElementById('pet-description').innerText = pet.description;
+                } catch (error) {
+                    console.error('Error fetching pet details:', error);
+                }
+            } else {
+                console.error('No pet ID found in the URL');
+            }
+
+        });
+    </script>
+</body>
+</html>

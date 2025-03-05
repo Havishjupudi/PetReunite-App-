@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Quicksand",sans-serif;
+    line-height: 1;
+}
+
+header {
+    position: relative;
+    z-index: 100;
+}
+
+/* ----------------------------------- */
+/* GENERAL */
+/* ----------------------------------- */
+.section-hero strong {
+    color: #e63946;
+}
+
+.center {
+    max-width: 120rem;
+    margin: 0px auto;
+    padding: 0px 3.2rem;
+}
+
+.heading-common {
+    font-size: 3.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8rem;
+    text-align: center;
+}
+
+.head-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.breadcrums {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #e63946;
+    margin-bottom: 2rem;
+}
+
+.btn:link, .btn:visited {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.6rem 3.2rem;
+    text-decoration: none;
+    border-radius: 0.9rem;
+
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+
+.btn-start:link, .btn-start:visited {
+    color: #ffffff;
+    border: 2px solid snow;
+    border-radius: 100%;
+}
+
+.btn-start:hover, .btn-start:active {
+    background-color: #8a222a;
+}
+
+
+.btn-learn-more:link, .btn-learn-more:visited {
+    background-color: #ffffff;
+    color: black;
+}
+
+.btn-learn-more:hover, .btn-learn-more:active {
+    background-color: #999999;
+}
+
+
+/* ----------------------------------- */
+/* HEADER */
+/* ----------------------------------- */
+
+.logo {
+    height: 15.2rem;
+    padding-top: 1rem;
+}
+
+
+.header {
+    padding: 0 4rem;
+    font-size: 1.8rem;
+    height: 9.6rem;
+    width: 100%;
+    padding-left: 0px;
+
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-middle-sec {
+    position: relative; /* Necessary for positioning the pseudo-element */
+    display: flex; /* Ensure the links can be arranged side by side */
+    gap: 4rem; /* Space between the links */
+    align-items: center; /* Center align the items */
+}
+
+.link-middle-sec a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative; /* Required for the absolute positioning of the ::after pseudo-element */
+}
+
+.link-middle-sec a::after {
+    content: '';
+    position: absolute;
+    width: 0; /* Start width of the underline */
+    height: 2px; /* Height of the underline */
+    background: white; /* Color of the underline */
+    bottom: -4px; /* Position the underline below the text */
+    left: 50%; /* Start from the middle */
+    transition: width 0.3s ease, left 0.3s ease; /* Animate width and left */
+}
+
+.link-middle-sec a:hover::after {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Move to the left edge */
+    color: #b4b22e; /* Change text color on hover */
+    border-color: #b4b22e; /* Change border color on hover */
+    transform: scale(1.05); /* Slightly scale up the button */
+}
+
+.link-middle-sec li {
+    list-style: none; /* Remove bullet points */
+}
+
+
+.nav-cta {
+    transition: 0.3s;
+}
+
+.nav-cta:link, .nav-cta:visited {
+    padding: 0.8rem 1.6rem;
+    border-radius: 8rem;
+    background-color: #e63946;
+    color: #ffffff;
+    text-decoration: none
+}
+
+.nav-cta:hover, .nav-cta:active {
+    background-color: #8a222a;
+}
+
+/* ----------------------------------- */
+/* MAIN */
+/* ----------------------------------- */
+
+.section-hero {
+    height: 100vh;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)) ,url('../images/main_bg.png');
+    background-size: cover;
+    
+
+    position: relative;
+    background-attachment: fixed;
+}
+
+.section-hero strong {
+    color: #e63946;
+}
+
+.main-title-hero {
+    font-size: 5.2rem;
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+    line-height: 1.1;
+    color: #ffffff;
+}
+.sub-content-hero {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    line-height: 1.4;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.hero-box {
+    margin: 0 auto;
+    max-width: 75rem;
+
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(20%, -80%);
+}
+
+.gamers {
+    display: flex;
+    gap: 2rem;
+    max-width: 60rem;
+    margin-top: 8.2rem;
+
+    align-items: center;
+}
+
+.customer-imgs img {
+    max-height: 4rem;
+    max-width: 4rem;
+    border-radius: 50%;
+    margin-left: -1.6rem;
+    border: 0.2rem solid  #ffffff;
+}
+.customer-imgs img:first-child {
+    margin-left: 0.5rem;
+}
+
+.gamers-text {
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.mobile-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-get-started {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 22px;
+    padding: 8px 28px; /* Adjusted padding to remove duplicate */
+    border-radius: 50px;
+    border: 2px solid snow; /* Initial border color */
+    color: snow; /* Initial text color */
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; /* Transition for smooth effects */
+}
+
+/* Hover effect */
+.btn-get-started:hover {
+    color: #b4b22e; /* Change text color on hover */
+    border-color: #b4b22e; /* Change border color on hover */
+    transform: scale(1.05); /* Slightly scale up the button */
+}
+
+/* Active effect */
+.btn-get-started:active {
+    transform: scale(0.95); /* Scale down when active (clicked) */
+}
+
+@media (max-width: 84em) {
+
+    .games-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem;
+    }
+
+    .item-lst {
+        display: none;
+    }
+
+    .link-middle-sec {
+        gap: 3.2rem;
+    }
+
+    .grid--3-col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 75em) {
+    html {
+        font-size: 52.25%;
+    }
+
+    .heading-common {
+        font-size: 3.6rem;
+    }
+
+    body h3 {
+        font-size: 2.4rem;
+    }
+
+    .grid {
+        column-gap: 4.8rem;
+        row-gap: 6.4rem; 
+    }
+}
+
+@media (max-width: 59em) {
+    html {
+        font-size: 46%;
+    }
+
+    .gamers {
+        margin-top: 3.8rem;
+    }
+
+    .feature-in-container img {
+        height: 2.4rem;
+    }
+
+    .section-testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .games-gallery {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .item-lst {
+        display: block;
+    }
+
+    .heading-common {
+        margin-bottom: 6.2rem;
+    }
+    .btn-get-started {
+        font-size: 46%;
+    }
+    .description-hero{
+        width: 40rem;
+    }
+    
+}
+
+@media (max-width: 48.5em) {
+    html {
+        font-size: 42%;
+    }
+
+    .heading-common {
+        font-size: 3.2rem;
+    }
+
+    .grid-subscription {
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+    }
+
+    .subscriptions-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      }
+
+    .subscription-card {
+        width: 44rem;
+    }
+
+    .heading-common {
+        margin-bottom: 4.2rem;
+    }
+
+    .link-middle-sec{
+        display: none;
+    }
+    
+}
+
+@media (max-width: 34em) {
+    .heading-common {
+        font-size: 3.2rem;
+    }
+
+    .hero-box {
+        top: 50;
+        bottom: 50;
+        transform: translate(-45%,-70%);
+    }
+
+    .main-title-hero{
+        font-size: 3.5rem;
+    }
+
+    .sub-content-hero {
+        font-size: 1.6rem;
+    }
+
+    .gamers {
+        width: 50rem;
+    }
+
+    .gamers p {
+        font-size: 1.6rem;
+    }
+
+    .feature-in-container img {
+        height: 1.6rem;
+    }
+
+    .feature-in-container .alter-img {
+        height: 3.2rem;
+    }
+    .feature-in-container {
+        padding-bottom: 2rem;
+    }
+
+    .grid--3-col {
+        grid-template-columns: 1fr;
+        gap: 2.4rem;
+    }
+
+    .testimonials {
+        grid-template-columns: 1fr;
+        gap: 2.4rem;
+    }
+
+    .games-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+        width: 100%;
+    }
+
+    .tags {
+        font-size: 1.4rem;
+    }
+
+    .game-title {
+        font-size: 2.8rem;
+    }
+    .game-details {
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+    }
+
+    .footer-bottom p{
+        font-size: 1.6rem;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .subscription-card p {
+        font-size: 1.8rem;
+        text-align: left;
+        line-height: 1.1;
+    }
+}

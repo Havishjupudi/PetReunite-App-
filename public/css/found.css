@@ -1,0 +1,10 @@
+.pet-card {
+    width: 100%;
+    max-width: 35rem;
+    height: auto;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    border-radius: 50px 50px 9px 9px; 
+    transition: transform 0.3s ease-in-out;
+    background-color: #59db8b;
+}

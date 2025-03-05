@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/pet-details.css">
+    <title>Pet Detail</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div>
+                <div class="image-section">
+                    <img id="pet-image" alt="Pet Image" class="pet-image">
+                </div>
+                <div class="missingSince" style="background-color: rgb(55, 187, 55);">
+                    <p class="ms">Found On:</p>
+                    <p><span id="date-last-seen"></span></p>
+                </div>
+            </div>
+            <div class="details-section">
+                <h1 id="pet-name" class="pet-name"></h1>
+                <p id="pet-id" class="pet-id"><strong>ID:</strong></p>
+                <p><strong>Status:</strong> <span id="pet-status" class="status" style="color: rgb(97, 221, 40);"></span></p>
+                <p><strong>Species:</strong> <span id="pet-species"></span></p>
+                <p><strong>Area Found:</strong> <span id="found-area">e</span></p>
+                <p><strong>Nearest Landmark:</strong> <span id="nearest-landmark"></span></p>
+                <p><strong>Description:</strong> <span id="pet-description"></span></p>
+                <p><strong>Contact mail:</strong> <span id="Email"></span></p>
+                <a href="https://www.instagram.com/pawsreconnected/" target="_blank">
+                    <button class="view-instagram">View on Instagram</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            // Get pet ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const petId = urlParams.get('id');
+
+            if (petId) {
+                try {
+                    const response = await fetch(`/FoundPets/${petId}`);
+                    
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const pet = await response.json();
+
+                    if (!pet) {
+                        throw new Error('No pet data received');
+                    }
+
+                    console.log('Fetched pet details:', pet); 
+
+                    // Display pet data
+                    document.getElementById('pet-image').src = pet.pictureUrl; 
+                    document.getElementById('pet-name').innerText = 'UnKnown';
+                    document.getElementById('pet-id').innerHTML = `<strong>ID:</strong> ${pet.reuniteId}`;
+                    document.getElementById('pet-status').innerText = pet.isLost ? 'Lost' : 'Found';
+                    document.getElementById('pet-species').innerText = pet.species;
+                    document.getElementById('found-area').innerText = pet.foundArea; 
+                    document.getElementById('nearest-landmark').innerText = pet.nearestLandmark;
+                    document.getElementById('pet-description').innerText = pet.description;
+                    document.getElementById('Email').innerText = 'petsreunite052@gmail.com';
+
+                    // Format and display the dateFound
+                    const dateFounds = new Date(pet.dateFound).toLocaleDateString('en-GB', {
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric'
+                    });
+                    document.getElementById('date-last-seen').innerText = dateFounds; // Change to date-found
+
+                } catch (error) {
+                    console.error('Error fetching pet details:', error);
+                }
+            } else {
+                console.error('No pet ID found in the URL');
+            }
+        });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/css/global_Lost.css">
+  <link rel="stylesheet" href="/public/css/found-NOID.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <title>Lost Pets</title>
+</head>
+<body>
+  <header class="header">
+    <a href="#">
+      <img class="logo" alt="Omnifood logo" src="/public/images/logo.png" />
+    </a>
+
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li><a class="main-nav-link" href="/public/html/report-pets.html">Report Pets</a></li>
+        <li>
+          <a class="main-nav-link" href="/public/html/lost-pets.html">Lost Pets</a>
+        </li>
+        <li><a class="main-nav-link" href="/public/html/found-NOID-pets.html">Unclaimed Pets</a></li>
+        <li><a class="main-nav-link" href="/">Home</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section-lost-pets center" id="Pets">
+    <div class="head-container">
+      <h2 class="heading-common">
+        Found Pets List
+      </h2>
+      <div class="search-container">
+        <input type="text" class="search-box" placeholder="Search with Reunite ID..." />
+        <button class="search-button">Search</button>
+        </div>
+      </div>
+      <div id="search-message" style="display: none; color: red; text-align: center;">
+        Pet not found
+      </div>      
+    <div id="pet-cards-container" class="grid grid--3-col">
+    </div>
+  </section>
+  <script src="/public/js/found-NOID-pet.js"></script>
+</body>
+</html> 
+

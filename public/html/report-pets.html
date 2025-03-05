@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/report-pet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "KftvVhY70WPKaCvHJ",
+        });
+    })();
+    </script>
+
+    <title>Report Pets</title>
+</head>
+<body>
+<header>
+    <div class="header">
+        <a href="#">
+            <img class="logo" alt="Omnifood logo" src="/public/images/logo.png" />
+        </a>
+        <nav class="link-middle-section">
+            <ul class="link-middle-sec">
+                <li><a class="main-nav-link" href="/public/html/lost-pets.html">Lost Pets</a></li>
+                <li><a class="main-nav-link" href="/public/html/found-pets.html">Found Pets</a></li>
+                <li><a class="main-nav-link" href="/public/html/found-NOID-pets.html">Unclaimed Pets</a></li>
+                <li><a class="main-nav-link" href="/">Home</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="report-sec">
+    <div class="container">
+        <h1>We Can Help Find Your Pet.</h1>
+        <p class="context">It's super simple and takes only minutes. Just add your pet's info, picture, and contact information.</p>
+        <div class="toggle-container">
+            <button class="toggle-button active" id="lost-toggle">Lost Pet</button>
+            <button class="toggle-button" id="found-toggle">Found Pet</button>
+        </div>
+
+        <!-- Lost Pet Form -->
+        <form id="Lost-reportForm" enctype="multipart/form-data">
+            <div class="form-section active" id="lost-section">
+
+                <label for="pet-name">Pet Name*</label>
+                <input type="text" id="pet-name" name="lost-pet-name" required placeholder="Pet Name">
+
+                <label for="sex">Sex*</label>
+                <select id="sex" name="sex" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+
+                <label for="species">Species*</label>
+                <input type="text" id="species" name="species" required>
+
+                <label for="date-last-seen">Date Last Seen*</label>
+                <input type="date" id="date-last-seen" name="date-last-seen" required>
+
+                <label for="area-last-seen">Area Last Seen*</label>
+                <input type="text" id="area-last-seen" name="area-last-seen" required>
+
+                <label for="nearest-landmark">Nearest Landmark*</label>
+                <input type="text" id="nearest-landmark" name="nearest-landmark" required>
+
+                <label for="description">Description*</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="pet-image">Upload Pet Image*</label>
+                <input type="file" id="pet-image" name="image" accept="image/*" required>
+
+                <button type="submit">Report Lost Pet</button> 
+            </div>
+        </form>
+
+        <!-- Found Pet Form With ID -->
+        <form id="Found-reportForm" enctype="multipart/form-data">
+            <div class="form-section" id="found-section">
+                
+                <label for="found-reunite-id">Reunite ID*</label>
+                <div class="input-group">
+                    <div>
+                        <input type="text" id="found-reunite-id" name="found-reunite-id" required>
+                        <span id="tick-mark" class="tick-mark" style="display: none;">✔</span>
+                        <span id="wrong-mark" class="wrong-mark" style="display: none;">❌</span>
+                    </div>
+                    
+                    <button type="button" class="verify-button" id="verify-found">Verify</button>
+                    <p>Don't have a Reunite ID? <a href="#" id="report-no-id">Report found pet here</a></p>
+                </div>
+
+                <label for="found-pet-name">Pet Name*</label>
+                <input type="text" name="found-pet-name" id="found-pet-name" required>
+
+                <label for="sex" style="display: none;">Sex*</label>
+                <select id="sex" style="display: none;" name="sex" required>
+                    <option value="male" style="display: none;">Male</option>
+                    <option value="female" style="display: none;">Female</option>
+                </select>
+
+                <label for="species">Species*</label>
+                <input type="text" id="fill-species" name="species" required>
+
+                <label for="last-missing-date">Last Missing Date*</label>
+                <input type="date" id="fill-last-missing-date" name="last-missing-date" required>
+
+                <label for="last-seen-area">Last Seen Area*</label>
+                <input type="text" id="fill-last-seen-area" name="last-seen-area" required>
+
+                <label for="found-area">Found Area*</label>
+                <input type="text" id="found-area" name="found-area" required>
+
+                <label for="found-nearest-landmark">Nearest Landmark*</label>
+                <input type="text" id="found-nearest-landmark" name="found-nearest-landmark" required>
+                
+                <label for="description">Description*</label>
+                <textarea id="found-description" name="found-description" rows="4" required></textarea>
+
+                <label for="found-image">Upload Found Pet Image*</label>
+                <input type="file" id="image" name="image" accept="image/*" multiple>
+
+                <label for="email" style="display: none;">Email Address</label>
+                <input type="email" style="display: none;" id="fill-email" name="email" required>
+
+                <label for="found-email">Email Address*</label>
+                <input type="email" id="found-email" name="found-email" required>
+
+                <label for="fill-image" style="display: none;"> Upload Pet Image*</label>
+                <input type="text" id="fill-image" style="display: none;" name="fill-image"required>
+
+                <button id="found-button" type="submit">Report Found Pet</button> 
+            </div>
+        </form>
+
+                <!-- Found Pet Form Without ID -->
+        <div id="found-no-id-form" style="display: none;">
+            <h2>Report Found Pet Without Reunite ID</h2>
+            <form id="found-pet-no-id-form">
+                <label for="fill-species">Species*</label>
+                <input type="text" id="fill-species" name="fill-species" required>
+
+                <label for="fill-found-area">Found Area*</label>
+                <input type="text" id="fill-found-area" name="fill-found-area" required>
+
+                <label for="fill-nearest-landmark">Nearest Landmark*</label>
+                <input type="text" id="fill-nearest-landmark" name="fill-nearest-landmark" required>
+
+                <label for="fill-description">Description*</label>
+                <textarea id="fill-description" name="fill-description" required></textarea>
+
+                <label for="fill-image">Upload Found Pet Image*</label>
+                <input type="file" id="noid-image" name="image" accept="image/*" required>
+
+                <label for="fill-email">Email Address*</label>
+                <input type="email" id="mail" name="fill-email" required>
+
+                <button type="submit">Report Found Pet</button>
+                <p>Have a Reunite ID? <a href="#" id="have-id">Report found pet here</a></p>
+            </form>  
+    </div>
+</section>
+<script type="module" src="/public/js/main.js"></script>
+
+<script>
+    // Connect to the WebSocket server
+    const socket = new WebSocket('ws://localhost:8080');
+  
+    // Listen for messages
+    socket.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      if (data.message === 'New pet added') {
+        // Update the UI or do something else based on the new pet
+      }
+    };
+  
+    socket.onopen = () => {
+      console.log('WebSocket connection opened');
+    };
+  
+    socket.onclose = () => {
+      console.log('WebSocket connection closed');
+    };
+  </script>
+  
+</body>
+</html>

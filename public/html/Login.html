@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/public/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SIGN IN</h1>
+        </header>
+
+        <!-- Assign the form an ID to target in the script -->
+        <form id="loginForm" action="#" method="POST">
+            <div class="form-group">
+                <label for="username">Username*</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password*</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        // Add an event listener for form submission
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get username and password values
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Check credentials
+            if (username === 'petreunite' && password === 'pet@1234') {
+                // Redirect to the next page if credentials are correct
+                window.location.href = '/public/html/report-pets.html'; // Replace with the actual next page URL
+            } else {
+                // Display an error message (optional)
+                alert('Invalid username or password.');
+            }
+        });
+    </script>
+</body>
+</html>

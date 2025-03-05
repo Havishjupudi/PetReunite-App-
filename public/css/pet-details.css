@@ -1,0 +1,171 @@
+*{
+    font-family: "Quicksand",sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../images/details_bg.png'); 
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90%; 
+    max-width: 1200px; 
+}
+
+.card {
+    display: flex;
+    align-items: center; 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    height: 600px;
+    width: 1200px; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    margin: auto; 
+}
+
+.image-section {
+    flex: 1;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px; 
+}
+
+.pet-image {
+    width: 100%; 
+    height: auto;
+    border-radius: 10px;
+    max-width: 250px; 
+    margin-bottom: 10px;
+}
+.missingSince {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+    width: 90%; 
+    background-color: #e63946; 
+    font-size: 1.8rem; 
+    color: white; 
+    padding: 15px 20px; 
+    border-radius: 10px; 
+    margin-top: 15px; 
+    text-align: center; 
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.missingSince p {
+    margin: 0px;
+    color: white;
+}
+.missingSince:hover {
+    background-color: #d62839; 
+    transform: scale(1.02); 
+}
+
+.details-section {
+    flex: 2; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+}
+
+h1.pet-name {
+    color: #ff6f61; 
+    font-size: 4rem; 
+    margin: 0 0 15px; 
+}
+
+.pet-id {
+    font-size: 1.5rem; 
+    color: #555;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.lost {
+    color: #e63946; 
+}
+
+p {
+
+    line-height: 1.6; 
+    font-size: 1.4rem; 
+    font-weight: 500;
+}
+
+strong {
+    color: #333; 
+}
+
+.view-instagram {
+    margin-top: 20px; 
+    padding: 12px 25px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #ff6f61; 
+    color: white; 
+    font-size: 1.2rem; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.view-instagram:hover {
+    background-color: #e63946; 
+}
+
+/* Mobile device */
+@media (max-width: 768px) {
+    .header{
+        display: none;
+    }
+
+    .card {
+        flex-direction: column; 
+        height: auto; 
+        padding: 20px; 
+        width: 100%; 
+    }
+
+    .image-section {
+        margin-right: 0; 
+        margin-bottom: 20px; 
+    }
+
+    .pet-image {
+        max-width: 100%; 
+    }
+
+    .missingSince {
+        font-size: 1.5rem; 
+        padding: 10px 15px; 
+    }
+
+    h1.pet-name {
+        font-size: 2.5rem; 
+    }
+
+    .pet-id {
+        font-size: 1.2rem; 
+    }
+
+    p {
+        font-size: 1rem; 
+    }
+
+    .view-instagram {
+        padding: 10px 20px; 
+        font-size: 1rem; 
+    }
+}
