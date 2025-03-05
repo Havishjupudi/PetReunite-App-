@@ -509,7 +509,10 @@ const generateUniqueReuniteId = async () => {
 };
 
 // WebSocket server to notify the frontend
-const wss = new WebSocketServer({ port: 8080 });
+const WS_PORT = process.env.WS_PORT || 8081;
+const wss = new WebSocketServer({ port: WS_PORT });
+console.log(`WebSocket server running on port ${PORT}`);
+
 
 wss.on('connection', (ws) => {
     console.log('Frontend connected via WebSocket');
